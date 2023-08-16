@@ -7,11 +7,11 @@ import Post from "../components/home/Post.js";
 import { POSTS } from "../data/posts";
 import BottomTabs, { bottomTabIcons } from "../components/home/BottomTabs";
 
-const Homescreen = () => {
+const Homescreen = ({navigation}) => {
   
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header navigation={navigation} />
       <Stories />
       <ScrollView>
         {POSTS.map((post, index) => (
